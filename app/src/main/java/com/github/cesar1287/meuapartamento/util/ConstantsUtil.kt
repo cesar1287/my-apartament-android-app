@@ -5,4 +5,10 @@ class ConstantsUtil {
     object Main {
         const val RC_SIGN_IN = 8001
     }
+
+    object Firestore {
+        const val FIRESTORE_USERS = "users"
+        const val FIRESTORE_NAME = "name"
+        const val FIRESTORE_EMAIL = "email"
+    }
 }
