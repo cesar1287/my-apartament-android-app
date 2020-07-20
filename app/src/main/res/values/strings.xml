@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Meu apartamento</string>
+    <string name="facebook_application_id">3534432253233572</string>
+    <string name="facebook_login_protocol_scheme">fb3534432253233572</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "250122599375",
+    "firebase_url": "https://meu-apartamento-86a66.firebaseio.com",
+    "project_id": "meu-apartamento-86a66",
+    "storage_bucket": "meu-apartamento-86a66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250122599375:android:ef2757c80d4d26ddf2f0ba",
+        "android_client_info": {
+          "package_name": "com.github.cesar1287.meuapartamento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250122599375-j8llagggts77cms8fnkvdpl26upcntjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.cesar1287.meuapartamento",
+            "certificate_hash": "b8c219c6ccc2e1ca051e2f9d1a4db4bff5c7bd0b"
+          }
+        },
+        {
+          "client_id": "250122599375-r4eq73m2effa2scigqrfkqufn3kchs8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9m8RfTttMyNaZa1cJ_XnAaCjY5ROsaJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250122599375-r4eq73m2effa2scigqrfkqufn3kchs8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
