@@ -8,9 +8,9 @@ class MainBusiness : BaseBusiness() {
     fun getProviders(): MutableList<AuthUI.IdpConfig> {
         // Choose authentication providers
         return arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build(),
             AuthUI.IdpConfig.FacebookBuilder().build(),
+            AuthUI.IdpConfig.EmailBuilder().build(),
             AuthUI.IdpConfig.AnonymousBuilder().build())
     }
 }
