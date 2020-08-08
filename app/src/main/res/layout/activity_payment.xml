@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@id/tilPaymentTotalAmount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/tilPaymentDepositValue"
+            app:layout_constraintBottom_toTopOf="@+id/tilPaymentQuantity"
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
@@ -56,34 +56,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPaymentDepositValue"
+            android:id="@+id/tilPaymentQuantity"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tilPaymentInitialValue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/tilPaymentQuantity"
-            android:layout_marginTop="@dimen/defaultMargin"
-            android:layout_marginStart="@dimen/defaultMargin"
-            android:layout_marginEnd="@dimen/defaultMargin"
-            android:hint="@string/payment_deposit_value"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPaymentQuantity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tilPaymentDepositValue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/mtvPaymentLabelValuePerMonth"
+            app:layout_constraintBottom_toTopOf="@+id/tilPaymentDepositValue"
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
@@ -97,6 +76,28 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPaymentDepositValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilPaymentQuantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/mtvPaymentLabelValuePerMonth"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:layout_marginStart="@dimen/defaultMargin"
+            android:layout_marginEnd="@dimen/defaultMargin"
+            android:hint="@string/payment_deposit_value"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/mtvPaymentLabelValuePerMonth"
             android:layout_width="0dp"
@@ -107,7 +108,7 @@
             android:textAlignment="center"
             android:textSize="@dimen/default_subtitle_size"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/tilPaymentQuantity"
+            app:layout_constraintTop_toBottomOf="@+id/tilPaymentDepositValue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/mtvPaymentValuePerMonth" />
