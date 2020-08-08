@@ -1,6 +1,7 @@
 package com.github.cesar1287.meuapartamento.features
 
 import com.firebase.ui.auth.AuthUI
+import com.github.cesar1287.meuapartamento.core.api.Resource
 import com.github.cesar1287.meuapartamento.core.base.BaseBusiness
 import com.github.cesar1287.meuapartamento.core.repository.MainRepository
 import com.google.firebase.auth.FirebaseUser
@@ -21,5 +22,9 @@ class MainBusiness : BaseBusiness() {
 
     fun saveUser(user: FirebaseUser) {
         mainRepository.saveUser(user)
+    }
+
+    suspend fun getPayments(): Resource {
+        return mainRepository.getPayments()
     }
 }

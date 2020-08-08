@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="xxxlargeMargin">60dp</dimen>
+    <dimen name="xxlargeMargin">36dp</dimen>
+    <dimen name="xlargeMargin">32dp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="defaultMargin">16dp</dimen>
+    <dimen name="xdefaultMargin">12dp</dimen>
+    <dimen name="minimumMargin">8dp</dimen>
+    <dimen name="xminimumMargin">4dp</dimen>
+
+    <dimen name="default_title_size">28sp</dimen>
+    <dimen name="default_title_new_contact_size">22sp</dimen>
+    <dimen name="default_name_size">16sp</dimen>
+    <dimen name="default_cpf_size">14sp</dimen>
+
+    <dimen name="text_12_sp">12sp</dimen>
+    <dimen name="text_14_sp">14sp</dimen>
+    <dimen name="text_16_sp">16sp</dimen>
+
+    <dimen name="height_toolbar_tracking">4dp</dimen>
+</resources>

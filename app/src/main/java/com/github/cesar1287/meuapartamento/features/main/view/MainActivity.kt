@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 .createSignInIntentBuilder()
                 .setAvailableProviders(mainViewModel.getProviders())
                 .setIsSmartLockEnabled(false)
+                .setTheme(R.style.AppTheme)
                 .build(),
             RC_SIGN_IN)
     }
@@ -54,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                 val user = FirebaseAuth.getInstance().currentUser
                 user?.let {
                     mainViewModel.saveUser(it)
+                    mainViewModel.getPayments()
                 } ?: run {
                     //todo show error user null
                 }
