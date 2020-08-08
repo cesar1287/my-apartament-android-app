@@ -1,4 +1,4 @@
-package com.github.cesar1287.meuapartamento.features
+package com.github.cesar1287.meuapartamento.features.main.business
 
 import com.firebase.ui.auth.AuthUI
 import com.github.cesar1287.meuapartamento.core.api.Resource

@@ -1,10 +1,11 @@
-package com.github.cesar1287.meuapartamento.features
+package com.github.cesar1287.meuapartamento.features.main.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.firebase.ui.auth.AuthUI
 import com.github.cesar1287.meuapartamento.core.Payments
 import com.github.cesar1287.meuapartamento.core.base.BaseViewModel
+import com.github.cesar1287.meuapartamento.features.main.business.MainBusiness
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

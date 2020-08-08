@@ -1,4 +1,4 @@
-package com.github.cesar1287.meuapartamento.features
+package com.github.cesar1287.meuapartamento.features.main.view
 
 import android.app.Activity
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.github.cesar1287.meuapartamento.R
+import com.github.cesar1287.meuapartamento.features.main.viewmodel.MainViewModel
+import com.github.cesar1287.meuapartamento.features.payment.PaymentActivity
 import com.github.cesar1287.meuapartamento.util.ConstantsUtil.Main.RC_SIGN_IN
 import com.google.firebase.auth.FirebaseAuth
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
 
         user?.let {
-            //todo user logged in
+            startActivity(Intent(this, PaymentActivity::class.java))
         } ?: run {
             // Create and launch sign-in intent
             startFirebaseUIAuthActivity()
