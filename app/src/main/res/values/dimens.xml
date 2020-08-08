@@ -10,6 +10,7 @@
     <dimen name="xminimumMargin">4dp</dimen>
 
     <dimen name="default_title_size">28sp</dimen>
+    <dimen name="default_subtitle_size">22sp</dimen>
     <dimen name="default_title_new_contact_size">22sp</dimen>
     <dimen name="default_name_size">16sp</dimen>
     <dimen name="default_cpf_size">14sp</dimen>
