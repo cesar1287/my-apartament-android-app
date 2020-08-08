@@ -1,9 +1,9 @@
-package cesar1287.com.github.conversordemoedas.core.util
+package com.github.cesar1287.meuapartamento.util
 
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
-import cesar1287.com.github.conversordemoedas.extensions.unmask
+import com.github.cesar1287.meuapartamento.extensions.unmask
 
 class MaskWatcher(private var editText: EditText, private var mask: String) : TextWatcher {
 

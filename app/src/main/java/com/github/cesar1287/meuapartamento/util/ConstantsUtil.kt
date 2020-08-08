@@ -8,6 +8,7 @@ class ConstantsUtil {
 
     object Firestore {
         const val FIRESTORE_USERS = "users"
+        const val FIRESTORE_PAYMENTS = "payments"
         const val FIRESTORE_NAME = "name"
         const val FIRESTORE_EMAIL = "email"
     }
