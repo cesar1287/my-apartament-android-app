@@ -4,8 +4,9 @@
     <string name="facebook_login_protocol_scheme">fb3534432253233572</string>
     <string name="payment_total_amount">Entrada</string>
     <string name="payment_initial_value">O que você já tem</string>
-    <string name="payment_deposit_value">O que você precisa depositar</string>
+    <string name="payment_deposit_value">Pagamento por mês</string>
     <string name="payment_quantity_payments">Quantas parcelas</string>
     <string name="payment_save">Salvar</string>
     <string name="payment_label_value_per_month">Valor que você precisa juntar por mês para chegar na meta</string>
+    <string name="my_apartament_real_label">R$</string>
 </resources>

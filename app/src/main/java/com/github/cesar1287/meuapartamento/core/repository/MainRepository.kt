@@ -1,10 +1,12 @@
 package com.github.cesar1287.meuapartamento.core.repository
 
-import android.util.Log
+import com.github.cesar1287.meuapartamento.core.api.Resource
 import com.github.cesar1287.meuapartamento.core.base.BaseRepository
 import com.github.cesar1287.meuapartamento.util.ConstantsUtil.Firestore.FIRESTORE_EMAIL
 import com.github.cesar1287.meuapartamento.util.ConstantsUtil.Firestore.FIRESTORE_NAME
+import com.github.cesar1287.meuapartamento.util.ConstantsUtil.Firestore.FIRESTORE_PAYMENTS
 import com.github.cesar1287.meuapartamento.util.ConstantsUtil.Firestore.FIRESTORE_USERS
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.SetOptions
 
@@ -20,6 +22,12 @@ class MainRepository : BaseRepository() {
         db.collection(FIRESTORE_USERS)
             .document(user.uid)
             .set(userFirebase, SetOptions.merge())
+    }
+
+    suspend fun getPayments(): Resource {
+        val paymentsReference = db.collection(FIRESTORE_USERS).document(firebaseUser?.uid ?: "").collection(FIRESTORE_PAYMENTS)
+        val result = Tasks.await(paymentsReference.get())
+        return Resource.success(result.documents)
     }
 
 }

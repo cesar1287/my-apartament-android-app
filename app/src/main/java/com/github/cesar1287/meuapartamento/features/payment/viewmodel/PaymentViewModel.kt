@@ -7,8 +7,12 @@ class PaymentViewModel(
     private val paymentBusiness: PaymentBusiness
 ) : BaseViewModel() {
 
-    fun getValueToDeposit(totalAmount: Double, initialValue: Double, quantity: Double): Double {
-        return paymentBusiness.getValueToDeposit(totalAmount, initialValue, quantity)
+    fun getValueToDepositPerMonth(totalAmount: Double?, initialValue: Double?, quantity: Double?): String {
+        return paymentBusiness.getValueToDepositPerMonth(totalAmount, initialValue, quantity)
+    }
+
+    fun getPaymentPerMonth(totalAmount: Double?, quantity: Double?): String {
+        return paymentBusiness.getPaymentPerMonth(totalAmount, quantity)
     }
 
 

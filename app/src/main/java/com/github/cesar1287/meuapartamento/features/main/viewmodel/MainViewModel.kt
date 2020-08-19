@@ -11,9 +11,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.core.inject
 
-class MainViewModel: BaseViewModel() {
+class MainViewModel(
+    private val mainBusiness: MainBusiness
+): BaseViewModel() {
 
-    private val mainBusiness: MainBusiness by inject()
     private val mainPaymentsLiveData: MutableLiveData<Payments> = MutableLiveData()
 
     fun getProviders(): MutableList<AuthUI.IdpConfig> {

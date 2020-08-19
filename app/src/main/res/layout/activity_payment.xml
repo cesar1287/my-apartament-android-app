@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".features.payment.PaymentActivity">
+    tools:context=".features.payment.view.PaymentActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
+            app:prefixText="@string/my_apartament_real_label"
             android:hint="@string/payment_total_amount"
             app:layout_constraintBottom_toTopOf="@+id/tilPaymentInitialValue"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +46,7 @@
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
+            app:prefixText="@string/my_apartament_real_label"
             android:hint="@string/payment_initial_value"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -87,6 +89,7 @@
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
+            app:prefixText="@string/my_apartament_real_label"
             android:hint="@string/payment_deposit_value"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -103,7 +106,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/xlargeMargin"
-            android:gravity="center_horizontal"
             android:text="@string/payment_label_value_per_month"
             android:textAlignment="center"
             android:textSize="@dimen/default_subtitle_size"
@@ -115,12 +117,11 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/mtvPaymentValuePerMonth"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginTop="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
-            android:gravity="center_horizontal"
             android:textAlignment="center"
             android:textSize="@dimen/default_subtitle_size"
             app:layout_constraintTop_toBottomOf="@+id/mtvPaymentLabelValuePerMonth"

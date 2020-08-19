@@ -8,9 +8,10 @@ import br.com.concrete.canarinho.watcher.ValorMonetarioWatcher
 import com.github.cesar1287.meuapartamento.R
 import com.github.cesar1287.meuapartamento.extensions.brlToDouble
 import com.github.cesar1287.meuapartamento.features.payment.viewmodel.PaymentViewModel
-import com.github.cesar1287.meuapartamento.util.MaskWatcher
+import com.github.cesar1287.meuapartamento.util.MoneyTextWatcher
 import kotlinx.android.synthetic.main.activity_payment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.lang.ref.WeakReference
 
 class PaymentActivity : AppCompatActivity() {
 
@@ -26,18 +27,21 @@ class PaymentActivity : AppCompatActivity() {
 
     private fun setupObservables() {
         tilPaymentQuantity.editText?.addTextChangedListener {
-            it?.let { quantity ->
+            it?.let {
                 val totalAmount = tilPaymentTotalAmount.editText?.text.toString().brlToDouble()
                 val initialValue = tilPaymentInitialValue.editText?.text.toString().brlToDouble()
-                val valueToDeposit = viewModel.getValueToDeposit(totalAmount, initialValue, quantity.toString().brlToDouble())
-                tilPaymentDepositValue.editText?.text = Editable.Factory.getInstance().newEditable(valueToDeposit.toString())
+                val quantity = it.toString().brlToDouble()
+                val valueToDepositPerMonth = viewModel.getValueToDepositPerMonth(totalAmount, initialValue, quantity)
+                val paymentPerMonth = viewModel.getPaymentPerMonth(totalAmount, quantity)
+                mtvPaymentValuePerMonth.text = valueToDepositPerMonth
+                tilPaymentDepositValue.editText?.text = Editable.Factory.getInstance().newEditable(paymentPerMonth)
             }
         }
     }
 
     private fun setupViews() {
-        tilPaymentTotalAmount.editText?.addTextChangedListener(ValorMonetarioWatcher())
-        tilPaymentDepositValue.editText?.addTextChangedListener(ValorMonetarioWatcher())
-        tilPaymentInitialValue.editText?.addTextChangedListener(ValorMonetarioWatcher())
+        tilPaymentTotalAmount.editText?.addTextChangedListener(MoneyTextWatcher(WeakReference(tilPaymentTotalAmount.editText!!)))
+        tilPaymentDepositValue.editText?.addTextChangedListener(MoneyTextWatcher(WeakReference(tilPaymentDepositValue.editText!!)))
+        tilPaymentInitialValue.editText?.addTextChangedListener(MoneyTextWatcher(WeakReference(tilPaymentInitialValue.editText!!)))
     }
 }
